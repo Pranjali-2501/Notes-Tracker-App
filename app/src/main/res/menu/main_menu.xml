@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_delete"
+        android:title="Delete all notes" />
+
+    <item
+        android:id="@+id/overflowMenu"
+        android:icon="@drawable/new_add_photo"
+        android:iconTint="#344955"
+        android:title=""
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/copy"
+                android:icon="@drawable/ic_outline_camera_alt_24"
+                android:title="Take photo"
+                app:showAsAction="always|withText"/>
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/ic_outline_insert_photo_24"
+                android:title="Choose image"
+                app:showAsAction="always|withText"/>
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/cardview_shadow_end_color"
+        android:background="#E9E9E7"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/flower2"
+                android:elevation="0dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+            </com.google.android.material.appbar.MaterialToolbar>
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:maxLines="3"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:textSize="40dp"
+                android:id="@+id/textTool"
+                android:text="My Notes"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/grid_change"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_baseline_calendar_view_day_24"
+                    android:layout_gravity="center"/>
+                <EditText
+                    android:layout_marginTop="75dp"
+                    android:paddingTop="75dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:hint="Search Note"
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1"
+                    android:elevation="2dp"
+                    android:background="@drawable/search_background"
+                    android:padding="8dp"
+                    android:drawablePadding="4dp"
+                    android:layout_margin="12dp"
+                    android:id="@+id/search_bar"
+                    android:drawableRight="@drawable/ic_baseline_search_24"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/delete_all"
+                    android:src="@drawable/ic_outline_delete_outline_24"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <!-- RecyclerView that is responsible for holding a listtaskEntrytask data -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTasks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp" />
+
+        <!-- Floating action button that launches AddTaskActivity when clicked -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"
+            android:src="@drawable/notepad"
+            android:background="@color/fab_pink_color"
+            android:backgroundTint="#F67077"
+            android:scaleType="fitXY"
+            app:borderWidth="0dp"
+             />
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
